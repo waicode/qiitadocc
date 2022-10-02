@@ -1,4 +1,4 @@
-# qiitadocc
+# waicode/qiitadocc
 
 ![Qiita Sync](https://github.com/waicode/qiitadocc/actions/workflows/qiita_sync_check.yml/badge.svg)
 
