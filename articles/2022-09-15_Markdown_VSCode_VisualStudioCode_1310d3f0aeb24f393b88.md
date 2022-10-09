@@ -75,7 +75,7 @@ https://marketplace.visualstudio.com/items?itemName=bierner.emojisense
 
 ### Unicode絵文字の入力補完
 
-`:`を入力すると一般的な絵文字入力で使われるUnicode絵文字が絵文字コード付きで入力補完されます。たとえば「😀」を入力したい場合は`:grinning:`を選びます。
+`:` を入力すると一般的な絵文字入力で使われるUnicode絵文字が絵文字コード付きで入力補完されます。たとえば「😀」を入力したい場合は `:grinning:` を選びます。
 
 ![markdown_emojisense_input.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/35152/fe4d590e-6db3-6236-5079-b21db6204fa8.gif)
 
@@ -85,15 +85,15 @@ https://marketplace.visualstudio.com/items?itemName=bierner.emojisense
 
 ### 絵文字コードのプレビュー表示
 
-他にも、絵文字コードをMarkdown上で入力すると該当の絵文字をプレビュー表示してくれます。また、絵文字コードを入力したい場合は`::`で補完されます。
+他にも、絵文字コードをMarkdown上で入力すると該当の絵文字をプレビュー表示してくれます。また、絵文字コードを入力したい場合は `::` で補完されます。
 
 :::note info
-絵文字コードは`:`で囲まれた一意の絵文字を表すコードです。テキストとして入力すると表示されるタイミングで対応する絵文字に変換されます。たとえば`:smile:`は「😄」に変換されて表示されます。注意点として、QiitaやGithubをはじめ絵文字を表示する側が対応している必要があります。
+絵文字コードは `:` で囲まれた一意の絵文字を表すコードです。テキストとして入力すると表示されるタイミングで対応する絵文字に変換されます。たとえば `:smile:` は「😄」に変換されて表示されます。注意点として、QiitaやGithubをはじめ絵文字を表示する側が対応している必要があります。
 :::
 
 ## Insert Date String
 
-現在時刻文字列のショートカット入力ができるようになる拡張機能です。
+現在時刻の文字列をショートカット入力できるようになる拡張機能です。
 
 https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdatestring
 
@@ -105,7 +105,7 @@ https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdates
 注意点として、ショートカットキーが競合するとうまく動かなくなります。1つ前に説明した:emojisense:の絵文字Picker表示のショートカットと競合します。（`⌘` + `Shift` + `I` にも `⌘` + `I` と同じ絵文字Pickerが割り当てられています）こちらを使いたい場合は、VSCodeのショートカットキー設定から:emojisense:のキーバインドを削除またはしてください。
 :::
 
-日付のフォーマットは設定で変更可能です。たとえばISO 8601のタイムゾーン付きの形式（例：`2022-8-27T12:34:56+09:00`）にすることもできます。
+日付のフォーマットは設定で変更可能です。たとえば、ISO 8601のタイムゾーン付きの形式（例：`2022-8-27T12:34:56+09:00`）にできます。
 
 ![markdown_insert_date_string.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/35152/34f5b10c-da58-593a-df9b-ffc6ab4ccdcc.gif)
 
@@ -113,7 +113,7 @@ https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdates
 
 拡張機能を使えない場合は、VSCodeのスニペットを活用します。VSCodeの基本設定で使える機能です。
 
-VSCodeのプロジェクト設定として`.vscode/markdown.code-snippets`にスニペットを登録をすれば、プロジェクト固有の設定として、スニペット入力ができます。たとえば、テーブル表記をスニペット登録する場合は以下のように設定します。`table`とタイピングすれば、入力候補に表示されて選択できます。
+VSCodeのプロジェクト設定として `.vscode/markdown.code-snippets` にスニペットを登録をすれば、プロジェクト固有の設定として、スニペット入力ができます。たとえば、テーブル表記をスニペット登録する場合は以下のように設定します。`table` とタイピングすれば、入力候補に表示されて選択できます。
 
 ```json
 {
