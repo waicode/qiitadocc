@@ -109,6 +109,28 @@ https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdates
 
 ![markdown_insert_date_string.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/35152/34f5b10c-da58-593a-df9b-ffc6ab4ccdcc.gif)
 
+## Copy file name
+
+### ファイル名を右クリックメニューからコピー
+
+右クリックでファイル名のコピーが一発でできるようになる拡張機能です。
+
+https://marketplace.visualstudio.com/items?itemName=nemesv.copy-file-name
+
+VSCodeは標準だと右クリックでパスコピーしかできないので、ファイルを選択してENTERキーを押して「名前の変更」からファイル名をコピーしている人は多いかもしれません。
+
+拡張子あり・なしのいずれのファイル名も一発コピーできるので、地味に便利です。
+
+## Path Intellisense
+
+### ファイル名・パスの入力を補完
+
+ファイル名やファイルパスを予測してオートコンプリートしてくれます。
+
+https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense
+
+コーディング時と比べると利用機会はそれほど多くないですが、説明のためにファイル名やファイルパスを書くときに重宝します。
+
 # 拡張機能がなければスニペット登録
 
 拡張機能を使えない場合は、VSCodeのスニペットを活用します。VSCodeの基本設定で使える機能です。
