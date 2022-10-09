@@ -1,9 +1,9 @@
 {
-  "name": "qiita-content-boilerplate",
+  "name": "qiitadocc",
   "version": "1.0.0",
   "private": true,
-  "description": "Qiita content boilerplate",
-  "repository": "https://github.com/waicode/qiita-content-boilerplate.git",
+  "description": "Qiita content written by waicode",
+  "repository": "https://github.com/waicode/qiitadocc.git",
   "author": "waicode",
   "scripts": {
     "lint:markdown": "markdownlint-cli2 \"**/*.md\"",
