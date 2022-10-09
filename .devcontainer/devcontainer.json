@@ -1,6 +1,6 @@
 {
   "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
-  "service": "qiita",
+  "service": "qiitadocc",
   "workspaceFolder": "/workspace",
   "extensions": [
     ////
