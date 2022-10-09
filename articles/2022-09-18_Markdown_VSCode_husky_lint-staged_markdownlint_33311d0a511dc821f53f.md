@@ -18,7 +18,7 @@ markdownlintの拡張機能をインストールすると、VSCodeでマーク�
 
 https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint
 
-書き方に問題がある場合、VSCodeのエディタ上で波線で警告されます。
+書き方に問題がある場合、VSCodeのエディタ上に波線が表示されて警告されます。
 
 ![markdown_lint.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/35152/30cbdbcf-d7c1-df8a-1042-822319b2129c.gif)
 
@@ -26,9 +26,9 @@ markdownlintは拡張機能をインストールすればすぐ使えます。
 
 ですが、**デフォルトの構文チェックはかなり厳しめ**に設定されています。
 
-そのため、[markdownlintのルール](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md)を確認して`markdownlint.config`の設定を調整してから使うのが現実的です。
+そのため、[markdownlintのルール](https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md)を確認して `markdownlint.config` の設定を調整してから使うのが現実的です。
 
-`.vscode/settings.json`にmarkdownlintの設定を書いておけば、プロジェクト固有の設定として有効になります。
+`.vscode/settings.json` にmarkdownlintの設定を書いておけば、プロジェクト固有の設定として有効になります。
 
 以下は調整した設定の一例です。
 
@@ -55,15 +55,15 @@ JavascriptやTypescriptのファイルにeslint、CSSやSCSSのファイルstyle
 
 ## markdownlint-cli2
 
-コマンド（CLI）でチェックするなら`markdownlint-cli2`がオススメです。
+コマンド（CLI）でチェックするなら `markdownlint-cli2` がオススメです。
 
 https://github.com/DavidAnson/markdownlint-cli2
 
-従来から利用されていたmarkdownlintの伝統的なCLIである`markdownlint-cli`でも良いのですが、新しく登場した`markdownlint-cli2`の方が設定ベースで調整しやすく、VSCodeとうまく連動するように設計されています。
+従来から利用されていたmarkdownlintの伝統的なCLIである `markdownlint-cli` でも良いのですが、新しく登場した `markdownlint-cli2` の方が設定ベースで調整しやすく、VSCodeとうまく連動するように設計されています。
 
 ### markdownlint-cli2のインストール
 
-`npm`または`yarn`でインストールします。
+`npm` または `yarn` でインストールします。
 
 ```sh
 npm install --save-dev markdownlint-cli2
@@ -81,7 +81,7 @@ yarn add -D markdownlint-cli2
 markdownlint-cli2 "**/*.md"
 ```
 
-実際には`package.json`の`scripts`に登録して使うのが通例です。以下を追記します。
+実際には `package.json` の `scripts` に登録して使うのが通例です。以下を追記します。
 
 ```package.json
 "scripts": {
@@ -93,22 +93,21 @@ markdownlint-cli2 "**/*.md"
 
 ただし、このままではすべてのマークダウンファイルに対してすべてのルールが対象となるため、設定ファイルで調整します。
 
-プロジェクトルートに`.markdownlint-cli2.jsonc`を作成すれば設定が読み込まれます。
+プロジェクトルートに `.markdownlint-cli2.jsonc` を作成すれば設定が読み込まれます。
 
 :::note info
-`.jsonc`はコメントが書けるJSONフォーマットです。(JSONC = JSON with comments)
+`.jsonc` はコメントが書けるJSONフォーマットです。(JSONC = JSON with comments)
 :::
 
 :::note info
-ちなみに、VSCode設定ファイルのJSONは暗黙的にJSONCで解釈されます。そのため`.vscode/settings.json`をはじめとする`.json`拡張子の設定ファイルにコメントを書いてもエラーになりません。
+ちなみに、VSCode設定ファイルのJSONは暗黙的にJSONCで解釈されます。そのため `.vscode/settings.json` をはじめとする `.json` 拡張子の設定ファイルにコメントを書いてもエラーになりません。
 :::
 
+設定ファイルは複数のフォーマットに対応していますが、VSCodeと揃えるために `.jsonc` がおすすめです。
 
-設定ファイルは複数のフォーマットに対応していますが、VSCodeと揃えるために`.jsonc`がおすすめです。
+`config` の項目には**VSCode拡張機能のmarkdownlintの設定をそのまま記載**できます。
 
-`config`の項目には**VSCode拡張機能のmarkdownlintの設定をそのまま記載**できます。
-
-また、解析対象から外したいファイルやフォルダは`ignores`で設定します。
+また、解析対象から外したいファイルやフォルダは `ignores` で設定します。
 
 ```.markdownlint-cli2.jsonc
 {
@@ -130,13 +129,13 @@ https://github.com/waicode/blueblog/blob/main/front/.markdownlint-cli2.jsonc
 
 ### huskyとlint-stagedでプレコミット時に確認
 
-huskyを使うとコミットやプッシュ時に、任意のコマンドを自動で実行できます。これに加えてlint-stagedを使うと、ソースコード全体ではなく`git stage`されたファイルに対してlintすることができるようになります。
+huskyを使うとコミットやプッシュ時に、任意のコマンドを自動で実行できます。これに加えてlint-stagedを使うと、ソースコード全体ではなく `git stage` されたファイルに対してlintできます。
 
 これらを使って、**コミット時にステージ対象のファイルに対してmarkdownlint-cli2のコマンドを実行**します。
 
 #### huskyとlint-stagedのインストール
 
-huskyとlint-stagedが入ってない場合、`npm`または`yarn`でインストールします。
+huskyとlint-stagedが入ってない場合、`npm` または `yarn` でインストールします。
 
 ```sh
 npm install --save-dev husky lint-staged
@@ -158,7 +157,7 @@ npx husky install
 yarn husky install
 ```
 
-この操作で`.husky`ディレクトリが作成されます。
+この操作で `.husky` ディレクトリが作成されます。
 
 ```sh
 .husky
@@ -167,9 +166,9 @@ yarn husky install
 └── .gitignore
 ```
 
-さらに`package.json`のscriptsにhuskyが有効化される設定を入れておきます。
+さらに `package.json` のscriptsにhuskyが有効化される設定を入れておきます。
 
-`prepare`に`husky install`を記述します。
+`prepare` に `husky install` を記述します。
 
 ```package.json
 "scripts": {
@@ -178,11 +177,11 @@ yarn husky install
 ```
 
 :::note warn
-Monorepo（モノレポ）構成を採用している場合は、ルート直下の`package.json`に設定を入れます。
+Monorepo（モノレポ）構成を採用している場合は、ルート直下の `package.json` に設定を入れます。
 :::
 
 :::note warn
-yarn2を採用している場合は`prepare`でなく`postinstall`に記述します。プライベートパッケージと公開パッケージで記述が異なります。詳しくは[huskyの公式ドキュメント](https://typicode.github.io/husky/#/?id=yarn-2)を確認してください。
+yarn2を採用している場合は `prepare` でなく `postinstall` に記述します。プライベートパッケージと公開パッケージで記述が異なります。詳しくは[huskyの公式ドキュメント](https://typicode.github.io/husky/#/?id=yarn-2)を確認してください。
 :::
 
 #### huskyのpre-commitファイルを作成
@@ -197,7 +196,7 @@ npx husky add .husky/pre-commit "npm lint-staged"
 yarn husky add .husky/pre-commit "yarn lint-staged"
 ```
 
-以下の`.husky/pre-commit`ファイルが作成されます。
+以下の `.husky/pre-commit` ファイルが作成されます。
 
 ```.husky/pre-commit
 #!/usr/bin/env sh
@@ -209,7 +208,7 @@ npm lint-staged
 yarn lint-staged
 ```
 
-Monorepo（モノレポ）の場合は、リポジトリ内のいずれかのプロジェクトで実行したいケースが多いと思います。その場合、フォルダを移動するコマンドを追記します。
+Monorepo（モノレポ）の場合は、リポジトリ内のいずれかのプロジェクトで実行したいケースが多いでしょう。その場合、フォルダを移動するコマンドを追記します。
 
 ```.husky/pre-commit
 #!/usr/bin/env sh
@@ -224,13 +223,13 @@ yarn lint-staged
 
 https://github.com/waicode/blueblog/blob/main/.husky/pre-commit
 
-これでコミット時にlintされるようになりました。
+これでコミット時に更新したファイルがlintされるようになりました。
 
 #### lint-stagedの設定ファイルを作成
 
 最後にlint-stagedの設定ファイルで実行する静的解析（lint）を指定します。
 
-以下は`.md`の拡張子のファイルに対してmarkdownlintを行う設定です。
+以下は `.md` の拡張子のファイルに対してmarkdownlintを行う設定です。
 
 ``` .lintstagedrc.js
 module.exports = {
@@ -240,12 +239,12 @@ module.exports = {
 ```
 
 :::note warn
-ここで記載している`yarn lint:markdown`は、前述のmarkdownlint-cli2を設定した際に`package.json`の`scripts`に自分で記述したコマンドです。
+ここで記載している `yarn lint:markdown` は、前述のmarkdownlint-cli2を設定した際に `package.json` の `scripts` に自分で記述したコマンドです。
 :::
 
-lint-stagedの動作は`package.json`に書くこともできますが、別の設定ファイルに書いて`yarn`のコマンドを直接叩くのがオススメです。
+lint-stagedの動作は `package.json` に書くこともできますが、別の設定ファイルに書いて `yarn` のコマンドを直接叩くのがオススメです。
 
-設定ファイルは`.lintstagedrc.js`のように[lint-stagedのConfiguration](https://github.com/okonet/lint-staged#configuration)に記載されている設定ファイル名にすれば自動で読み込んでくれます。
+設定ファイルは `.lintstagedrc.js` のように[lint-stagedのConfiguration](https://github.com/okonet/lint-staged#configuration)に記載されている設定ファイル名にすれば自動で読み込んでくれます。
 
 #### 不正なMarkdownはコミットできなくなる
 
@@ -261,7 +260,7 @@ VSCodeと一緒に使うフォーマッターはPrettierが有名です。
 
 https://prettier.io/
 
-自動整形の設定を入れておけば、たとえばファイルの保存時にフォーマッターに設定された形式に自動的に補正してくれます。
+自動整形の設定を入れておけば、たとえばファイルの保存時にフォーマッターへ設定した形式に自動的に補正してくれます。
 
 markdownlint-cli2には自動修正モードで実行できるコマンド（`markdownlint-cli2-fix`）があるので、これも同義です。
 
@@ -273,7 +272,7 @@ markdownlint-cli2には自動修正モードで実行できるコマンド（`ma
 
 マークダウンはその歴史的背景からパーサの仕様が完全には統一されていません。[MDX](https://mdxjs.com/)や[MDC](https://content.nuxtjs.org/guide/writing/mdc/)など拡張構文も日々増えています。
 
-そのため、自動整形を入れると**意図せず補正されて見た目が崩れるリスク**があります。Markdownファイルは静的解析（lint）にとどめ、自動整形（format）まではやらないのが無難です。
+そのため、自動整形を入れると**見た目が意図せず補正されて崩れるリスク**があります。Markdownファイルは静的解析（lint）にとどめ、自動整形（format）まではやらないのが無難です。
 
 # MarkdownをVSCodeで効率良く書くTIPS
 

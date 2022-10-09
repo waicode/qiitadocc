@@ -30,11 +30,11 @@ https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
 
 ![markdown_all_in_one_b.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/35152/69595741-c1dd-82a8-688a-e0544a3f9917.gif)
 
-他にも、見出しレベルの上げ下げをするショートカットもあります。アウトライナーに慣れている方は使っても良いかと思います。マークダウンで見出しはよく使いますが、`#`の増減だけです。慣れていない人は、ショートカットコマンドを覚えなくても直接テキスト編集すれば十分です。
+他にも、見出しレベルの上げ下げをするショートカットもあります。見出しはよく使いますが、`#` の増減だけです。慣れていない人は、ショートカットコマンドを覚えなくても直接テキスト編集すれば十分です。
 
 ### リスト入力の補完
 
-リスト入力した状態で改行すると、連続入力ができます。インデントも考慮されます。`Tab`でリストの階層を下げる（`Shift` + `Tab` で上げる）こともできます。直感的に操作できて、とても便利です。
+リスト入力した状態で改行すると、連続入力ができます。インデントも考慮されます。`Tab` でリストの階層を下げる（`Shift` + `Tab` で上げる）こともできます。直感的に操作できて、とても便利です。
 
 ![markdown_all_in_one_list.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/35152/f4545542-5454-c61a-43e6-c686f3246d99.gif)
 
@@ -99,7 +99,7 @@ https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdates
 
 ### 指定形式で日付文字列を入力補完
 
-日付文字列をショートカットで入力できるようになります。対応するショートカットはMacでは `⌘` + `Shift` + `I`、Windowsでは `Ctrl` + `Shift` + `I`です。
+日付文字列をショートカットで入力できるようになります。対応するショートカットはMacでは `⌘` + `Shift` + `I`、Windowsでは `Ctrl` + `Shift` + `I` です。
 
 :::note warn
 注意点として、ショートカットキーが競合するとうまく動かなくなります。1つ前に説明した:emojisense:の絵文字Picker表示のショートカットと競合します。（`⌘` + `Shift` + `I` にも `⌘` + `I` と同じ絵文字Pickerが割り当てられています）こちらを使いたい場合は、VSCodeのショートカットキー設定から:emojisense:のキーバインドを削除またはしてください。

@@ -6,9 +6,12 @@
   // words - list of words to be always considered correct
   "words": [
     "joshi",
+    "lintstagedrc",
     "qiita",
+    "qiitadocc",
     "ryokat",
-    "textlintrc"
+    "textlintrc",
+    "waicode"
   ],
   // flagWords - list of words to be always considered incorrect
   // "flagWords": [],
