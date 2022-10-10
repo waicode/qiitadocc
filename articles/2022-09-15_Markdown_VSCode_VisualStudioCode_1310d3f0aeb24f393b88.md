@@ -117,7 +117,7 @@ https://marketplace.visualstudio.com/items?itemName=jsynowiec.vscode-insertdates
 
 https://marketplace.visualstudio.com/items?itemName=nemesv.copy-file-name
 
-VSCodeは標準だと右クリックでパスコピーしかできないので、ファイルを選択してENTERキーを押して「名前の変更」からファイル名をコピーしている人は多いかもしれません。
+VSCodeは標準だと右クリックでパスコピーしかできないので、ファイルを選択してENTERキーを押して「名前の変更」からファイル名をコピーしている人も多いのではないでしょうか。
 
 拡張子あり・なしのいずれのファイル名も一発コピーできるので、地味に便利です。
 
@@ -129,7 +129,7 @@ VSCodeは標準だと右クリックでパスコピーしかできないので�
 
 https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense
 
-コーディング時と比べると利用機会はそれほど多くないですが、説明のためにファイル名やファイルパスを書くときに重宝します。
+コーディング時と比べて利用機会はそれほど多くないですが、説明のためにファイル名やファイルパスを書くときに重宝します。
 
 # 拡張機能がなければスニペット登録
 
