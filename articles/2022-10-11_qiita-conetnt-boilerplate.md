@@ -17,7 +17,7 @@ Githubリポジトリと連携してVSCodeで書くことができる**Qiita執�
 # Qiita執筆環境ボイラープレートの特徴
 
 * **Qiitaの執筆に最適化されたVSCode拡張機能やスニペット**が自動的にインストールされます。
-* VSCodeの見た目が**Qiitaテーマカラー**になるので、何を編集しているのか分かりやすくなります。
+* VSCodeの見た目が**Qiitaライクなテーマカラー**になって編集対象が明確になります。
 * [**Qiita Sync**](https://github.com/ryokat3/qiita-sync)を使って、**Githubリポジトリで管理しているマークダウン記事をQiitaへ投稿**（同期）します。
 * [**Qiita Markdown Preview**](https://marketplace.visualstudio.com/items?itemName=ryokat3.vscode-qiita-markdown-preview)を使って**ローカル環境でプレビューを確認しながら記事を書く**ことができます。
 * 記事の内容は `markdownlint`,`textlint` で静的解析（lint）を行います。
@@ -38,11 +38,13 @@ VSCodeからコンテナにアクセスして執筆するため[**Dev Containers
 
 # ボイラープレートの使い方
 
-## 執筆環境を準備する
+## Githubテンプレートからリポジトリを複製する
 
 [**Githubのテンプレートリポジトリ**](https://github.com/waicode/qiita-content-boilerplate)の右上にある **"Use this template"** をクリックして、ボイラープレートからリポジトリを複製します。
 
 ![テンプレートからリポジトリを複製](../images/qiita-content-boilerplate_use_this_template_screenshot.png)
+
+## コンテナを立ち上げる
 
 VSCodeで複製したリポジトリをクローンして **"Reopen in Container"** でコンテナを立ち上げます。
 
@@ -52,13 +54,13 @@ Dockerコンテナの構成管理のために、Docker Composeを使っていま
 
 その後で `package.json` に記述したライブラリがインストールされます。さらに `devcontainer.json` に書かれた設定によって、VSCode拡張機能がインストールされます。
 
-<details><summary>devcontainerの中で既存のdocker-compose.ymlの設定をオーバーライドしている理由</summary>
+<details><summary>devcontainerの中からルート直下のdocker-compose.ymlを使っている理由</summary>
 
 実際のコンテナ構成として使われるのはルート直下にある `./docker-compose.yml` の設定ファイルです。`.devcontainer/docker-compose.yml` では、既存の設定ファイルをオーバーライドする記述を入れてます。（具体的には、公式が提供している[こちらの設定ファイル](https://github.com/microsoft/vscode-dev-containers/blob/main/containers/docker-existing-docker-compose/.devcontainer/docker-compose.yml)を参考にしています）このような構成にしておくと、VSCode環境以外でもdocker-composeの設定ファイルを使い回すことができます。
 
 </details>
 
-## 記事を書いて同期する
+## 記事を書いてQiita Syncで同期する
 
 VSCodeで編集した記事をQiitaへ投稿するために、**Qiita SyncのGithubアクションが設定**されています。
 
@@ -122,6 +124,8 @@ https://qiita.com/Qiita/items/c686397e4a0f4f11683d
 
 ### 記事内容をチェックする設定
 
+テキストにはコンパイルもなければ、実際に読まれるときの動的なチェックもありません。事前の静的解析は「糸くず（lint）」の表現以上に重要な役割を占めると考えています。
+
 このボイラープレートには、以下に対して静的解析（lint）する設定が入っています。
 
 * マークダウンの形式（`markdownlint`）
@@ -145,7 +149,7 @@ https://qiita.com/Qiita/items/c686397e4a0f4f11683d
 
 `husky` と `lint-staged` でコミット時に自動でlintします。そのため、不正な形式の文章はコミットされません。
 
-コミット時のlintについて詳細が知りたい方は、以下の記事を参考にしてください。
+コミット時のlintについては以下の記事に詳しく書いてます。知りたい方は参考にしてください。
 
 https://qiita.com/waicode/items/33311d0a511dc821f53f
 
@@ -290,17 +294,21 @@ rules:
 
 Qiita Syncは管理画面で記事を編集した場合でも、あとから同期（sync）アクションでGithubリポジトリに変更内容を取り込むことができます。この点はとても便利です。
 
+# Qiita執筆環境ボイラープレートのGithubリポジトリ
+
+ここまでお読みいただきありがとうございました。Qiitaの記事をGithubリポジトリで管理して書いてみたいと思っていた方は、この機会にぜひご利用ください。
+
+https://github.com/waicode/qiita-content-boilerplate
+
 # Zenn執筆環境のボイラープレート
 
-同様の仕組みでZenn執筆環境のボイラープレートも公開しています。Zennの記事を書く方はこちらも合わせてご確認ください。
+同様の仕組みで**Zenn執筆環境のボイラープレート**も公開しています。Zennの記事を書く方はこちらも合わせてご確認ください。
 
 <!-- ZennのURL -->
 
-# Qiitaを技術ブログと同じVSCodeで書けるようにしてみた結果
+# 技術ブログと同じ環境でQiitaを書けるようにした結果
 
-もともと **「技術ブログと同じ環境で記事が書けたら、効率もモチベーションも上がりそう」** がボイラープレート作成に至ったきかっけでした。
-
-実際につくってみて、作業効率以上に**情報発信面でメリット**を感じることができました。
+もともと「技術ブログと同じ環境で記事が書けたら、効率もモチベーションも上がりそう」がボイラープレート作成に至ったきかっけでした。実際につくってみて、作業効率以上に**情報発信面でメリット**を感じることができました。
 
 詳しくは以下の記事にまとめています。よろしければご覧ください。
 
