@@ -6,7 +6,7 @@ private: false
 
 # QiitaをGithubと連携してVSCodeで書くために
 
-Githubリポジトリと連携してVSCodeで書くことができる**Qiita執筆環境のボイラープレート**[^1]を作成しました。
+Qiitaの記事投稿でもZennのように「Githubリポジトリと連携してVSCodeで書けたら便利だな」と思い、**Qiita執筆環境のボイラープレート**[^1]を作成しました。
 
 ![Qiita執筆環境のボイラープレート](../images/qiita-content-boilerplate_vscode_screenshot.png)
 
@@ -32,7 +32,7 @@ Githubリポジトリと連携してVSCodeで書くことができる**Qiita執�
 
 VSCodeからコンテナにアクセスして執筆するため[**Dev ContainersのVSCode拡張機能**](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)も必要です。
 
-利用にあたって、**ローカル環境にVSCodeとDockerが準備されていることを前提**としています。VSCodeのdevcontainer環境は、独立した開発環境をつくるには打って付けの構築手法です。構築のための手間と準備は必要なので、ちょっと面倒で難しそうだと思われていた方もいるでしょう。
+利用にあたって、**ローカル環境にVSCodeとDockerが準備されていることを前提**としています。VSCodeのdevcontainer環境は、独立した開発環境をつくるには打って付けの構築手法です。構築のための手間と準備は必要なので、面倒でちょっと難しそうだと思われる方もいるでしょう。
 
 しかしながら、**ボイラープレートにすべて設定が組み込まれている**ので、VSCodeとDockerがインストールされていれば設定変更不要でそのまま使うことができます。
 
@@ -116,7 +116,7 @@ https://qiita.com/waicode/items/1310d3f0aeb24f393b88
 
 #### 独自のマークダウン記法はVSCodeスニペットで
 
-`.vscode/markdown.code-snippets` にQiita独自の記法を含むマークダウン記法のスニペットを登録しています。
+`.vscode/markdown.code-snippets` にQiita独自の記法を含むマークダウン記法のスニペットを登録しています。使っていきながら、ご自身で使いやすいスニペットに書き換えることも可能です。
 
 Qiitaで使えるマークダウン記法は、Qiita公式が出している以下の記事に詳しく書かれています。
 
@@ -124,7 +124,7 @@ https://qiita.com/Qiita/items/c686397e4a0f4f11683d
 
 ### 記事内容をチェックする設定
 
-テキストにはコンパイルもなければ、実際に読まれるときの動的なチェックもありません。事前の静的解析は「糸くず（lint）」の表現以上に重要な役割を占めると考えています。
+テキストにはコンパイルもなければ、実際に読まれるときの動的なチェックもありません。事前の静的解析は「糸くず（lint）」を取る以上に重要な役割を占めると考えています。
 
 このボイラープレートには、以下に対して静的解析（lint）する設定が入っています。
 
