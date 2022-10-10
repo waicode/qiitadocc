@@ -11,7 +11,8 @@
     "qiitadocc",
     "ryokat",
     "textlintrc",
-    "waicode"
+    "waicode",
+    "Zenn"
   ],
   // flagWords - list of words to be always considered incorrect
   // "flagWords": [],
