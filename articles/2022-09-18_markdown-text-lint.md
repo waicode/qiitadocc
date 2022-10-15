@@ -1,6 +1,6 @@
 <!--
 title:   マークダウンをVSCodeで構文チェック・文章校正してコミット時にも静的解析（lint）する
-tags:    Markdown,VSCode,markdownlint,textlint,
+tags:    Markdown,VSCode,markdownlint,textlint,cspell
 id:      33311d0a511dc821f53f
 private: false
 -->
