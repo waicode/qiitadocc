@@ -1,11 +1,11 @@
 <!--
-title:   マークダウンをVSCodeで構文チェック・文章校正してコミット時にも静的解析（lint）する
+title:   VSCodeでマークダウン構文チェックと文章校正してコミット時にも静的解析（lint）する
 tags:    Markdown,VSCode,markdownlint,textlint,cspell
 id:      33311d0a511dc821f53f
 private: false
 -->
 
-# 不正なMarkdown構文や誤字脱字をリポジトリに混入させないために
+# 不正な構文や誤字脱字をリポジトリに混入させないために
 
 マークダウンに書く文章はコンパイルもなければ、実際に読まれるときの動的なチェックもできません。
 
