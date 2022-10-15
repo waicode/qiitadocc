@@ -25,9 +25,9 @@ private: false
 
 | ライブラリ | 説明 |
 | ---- | ---- |
-| markdownlint | マークダウンの構文をチェックする |
-| textlint |設定や辞書に従い文章を校正する |
-| cspell |英単語の誤字をチェックする |
+| [markdownlint](https://github.com/DavidAnson/markdownlint) | マークダウンの構文をチェックする |
+| [textlint](https://github.com/textlint/textlint) |設定や辞書に従い文章を校正する |
+| [cspell](https://cspell.org/) |英単語の誤字をチェックする |
 
 さらに `husky` と `lint-staged` を使えば、コミット時に変更対象ファイルだけコマンドを使って自動でチェックできます。
 
