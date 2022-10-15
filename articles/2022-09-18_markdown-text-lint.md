@@ -366,7 +366,7 @@ cspell "**"
 
 設定ファイルは `.cspell.json`  です。VSCode拡張機能もこの設定ファイルをもとにスペルをチェックします。
 
-```json:.cspell.jsonc
+```jsonc:.cspell.json
 {
   "version": "0.2",
   "language": "en",
