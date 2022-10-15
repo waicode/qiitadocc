@@ -5,7 +5,6 @@ id:      61ec0f9478fdb8a8e542
 private: false
 -->
 
-
 # QiitaをGithubと連携してVSCodeで書くために
 
 Qiitaの記事投稿でもZennのように「Githubリポジトリと連携してVSCodeで書けたら便利だな」と思い、**Qiita執筆環境のボイラープレート**[^1]を作成しました。
