@@ -1,8 +1,10 @@
 <!--
-title: M1,M2(ARM)のMacBookでOracle SQL Developerをエラーゼロで動かす
-tags: oracle,sqldeveloper,JDK,M1,M2
+title:   M1,M2(ARM)のMacBookでOracle SQL Developerをエラーゼロで動かす
+tags:    JDK,M1,M2,oracle,sqldeveloper
+id:      cd64cee96895b8ca7080
 private: false
 -->
+
 
 # M1,M2 MacでもSQL Developerは快適に動かせる
 
