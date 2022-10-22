@@ -1,10 +1,9 @@
 <!--
-title:   VSCodeでマークダウン構文チェックと文章校正してコミット時にも静的解析（lint）する
-tags:    Markdown,VSCode,markdownlint,textlint,cspell
+title:   VSCodeでマークダウンの構文と文章を校正してコミット時も自動でlintする
+tags:    Markdown,VSCode,cspell,markdownlint,textlint
 id:      33311d0a511dc821f53f
 private: false
 -->
-
 # 不正な構文や誤字脱字をリポジトリに混入させないために
 
 マークダウンに書く文章はコンパイルもなければ、実際に読まれるときの動的なチェックもできません。
