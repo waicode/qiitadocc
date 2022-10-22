@@ -5,6 +5,10 @@
   "allowCompoundWords": true,
   // words - list of words to be always considered correct
   "words": [
+    "aarch",
+    "Azul",
+    "drwxr",
+    "dtcache",
     "joshi",
     "lintstagedrc",
     "qiita",
