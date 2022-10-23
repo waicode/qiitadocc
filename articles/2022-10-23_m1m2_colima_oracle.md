@@ -1,8 +1,10 @@
 <!--
-title: M1,M2(ARM) MacBookにColimaでOracle Databaseを手間なくインストールする
-tags: colima,Lima,M1,oracle,Docker
+title:   M1,M2(ARM) MacBookにColimaでOracle Databaseを手間なくインストールする
+tags:    Docker,Lima,M1,colima,oracle
+id:      d67782c33b7d40052245
 private: false
 -->
+
 
 # M1,M2 Macで手間なくOracle開発環境を構築するために
 
