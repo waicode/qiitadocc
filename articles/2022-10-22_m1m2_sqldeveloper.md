@@ -4,8 +4,6 @@ tags:    JDK,M1,M2,oracle,sqldeveloper
 id:      cd64cee96895b8ca7080
 private: false
 -->
-
-
 # M1,M2 MacでもSQL Developerは快適に動かせる
 
 Oracle SQL Developerは無料で使える**Oracle専用のDatabaseのIDE**です。
@@ -109,7 +107,7 @@ drwxr-xr-x 3 root wheel 96  5  5  2020 jdk-14.0.1.jdk
 
 > Problem initializing the JavaFX runtime. This feature requires JavaFX.
 
-SQL Developerが「ようこそページ」を表示するときにJavaFXが必要で、それが見つけられくてエラーになっています。
+SQL Developerが「ようこそページ」を表示するときにJavaFXが必要で、それが見つけられずエラーになっています。
 
 ![Problem initializing the JavaFX runtime. This feature requires JavaFX.](../images/sqldeveloper-problem-initializing-the-javafx-runtime.png)
 
@@ -123,7 +121,7 @@ JavaFXを開発で使うわけではないため、エラーがでないよう�
 
 <details><summary>JavaFXをインストールして設定する場合</summary>
 
-JavaFXはJavaでGUIアプリケーションを作成するためのフレームワークです。[OpenJavaFXサイト](https://gluonhq.com/products/javafx/#ea)から「aarch64」のJava11（JDK11）に対応したJavaFXのをインストールして、SQL Developerに読み込ませることでエラーを回避できる可能性があります。ただ、記事作成時点ではAMD（aarch64）対応のJavaFX 11はダウンロードができませんでした。なお、JavaFXがAMD（aarch64）に対応したのも2021年末頃で、比較的最近の出来事です。
+JavaFXはJavaでGUIアプリケーションを作成するためのフレームワークです。[OpenJavaFXサイト](https://gluonhq.com/products/javafx/#ea)から「aarch64」のJava11（JDK11）に対応したJavaFXのをインストールして、SQL Developerに読み込ませることでエラーを回避できる可能性があります。ただ、記事作成時点ではARM（aarch64）対応のJavaFX 11はダウンロードができませんでした。なお、JavaFXがARM（aarch64）に対応したのも2021年末頃で、比較的最近の出来事です。
 
 </details>
 
