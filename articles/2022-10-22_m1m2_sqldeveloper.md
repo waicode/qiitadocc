@@ -5,7 +5,6 @@ id:      cd64cee96895b8ca7080
 private: false
 -->
 
-
 # M1,M2 MacでもSQL Developerは快適に動かせる
 
 Oracle SQL Developerは無料で使える**Oracle専用のDatabaseのIDE**です。
