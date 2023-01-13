@@ -1,7 +1,10 @@
 <!--
 title:   難しく考え過ぎないコンポーネント駆動開発
-tags:    フロントエンド,コンポーネント,storybook,Vue.js,Nuxt
+tags:    Nuxt,Vue.js,storybook,コンポーネント,フロントエンド
+id:      0b144039bf4b4eddcfee
+private: false
 -->
+
 
 ReactやVueの普及に伴い、ボトムアップで小さなコンポーネントを組み合わせてページを作る「コンポーネント駆動開発」がスタンダードになりつつあります。
 
